@@ -1,5 +1,7 @@
 package com.github.pitzzahh;
 
+import com.github.pitzzahh.exceptions.InvalidPinLengthException;
+import com.github.pitzzahh.exceptions.InvalidPinTypeException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -27,15 +29,15 @@ public final class PinGenerator {
     private static final Random random = new Random();
 
     /**
-     * Method that generates a pinInString.
-     * random pinInString or user defined pinInString.
-     * If the user did not follow the flow of the code, the program will return a pinInString that contains with mixed
+     * Method that generates a pin.
+     * random pin or user defined pin.
+     * If the user did not follow the flow of the code, the program will return a pin that contains with mixed
      * of numbers and letters.
-     * @param pinType the type of pinInString. You can specify the pinInString type by using the instance variables of this class
+     * @param pinType the type of pin. You can specify the pin type by using the instance variables of this class
      *      <p>NUMBERS = 1</p>
      *      <p>LETTERS = 2</p>
      *      <p>USER_DEFINED = 3</p>
-     * @param pinLength the length of the pinInString. The pinInString length should not be less than 4 and not over than 20 characters.
+     * @param pinLength the length of the pin. The pin length should not be less than 4 and not over than 20 characters.
      */
     public static Pin generatePin(int pinType, int pinLength) throws InvalidPinLengthException, InvalidPinTypeException {
 
@@ -45,9 +47,9 @@ public final class PinGenerator {
 
         char[] pinHolder = new char[0];
         if ((pinType == NUMBERS || pinType == LETTERS || pinType == MIXED_NUMBERS_AND_LETTERS || pinType == USER_DEFINED) && (pinLength >= 4 && pinLength <= 20)) {
-            // storing each randomly generated characters / user defined pinInString or password into this char array
+            // storing each randomly generated characters / user defined pin or password into this char array
             pinHolder = new char[pinLength];
-            // checks which type of pinInString is it
+            // checks which type of pin is it
             switch (pinType) {
                 case NUMBERS -> generatePin(pinLength, pinHolder, numbers);
                 case LETTERS -> generatePin(pinLength, pinHolder, letters);
@@ -77,34 +79,7 @@ public final class PinGenerator {
         }
     }
 
-    /**
-     * Record used for making a Pin object.
-     * @param pinInString the actual pin.
-     * @param pinType the type of pin. Numbers = 1, Letters = 2, User_Defined = 3.
-     * @param pinLength the length of the pin. The pin should always be the same as the length of the actual pin.
-     */
-    public record Pin(String pinInString, int pinType, int pinLength) {
-        @Override
-        public String toString() {
-            return (pinInString().length() == pinLength()) ? ("\u001B[35m" + pinInString()) : "";
-        }
-    }
 }
 
-/**
- * Throwable class used for handling exceptions on invalid pin type.
- */
-class InvalidPinTypeException extends Exception {
-    public InvalidPinTypeException(int pinType) {
-        super(String.format("INVALID PIN TYPE: UNKNOWN PIN %d", pinType));
-    }
-}
-/**
- * Throwable class used for handling exceptions on invalid pin length.
- */
-class InvalidPinLengthException extends Exception {
-    public InvalidPinLengthException(int pinLength) {
-        super(pinLength <= 3 ? String.format("PIN LENGTH SHOULD NOT BE LESS THAN OR EQUAL TO 3: PIN %d", pinLength) : pinLength >= 21 ? String.format("PIN LENGTH SHOULD NOT BE GREATER THAN OR EQUAL TO 21: PIN %d", pinLength) : "INPUTTED LENGTH IS NOT THE SAME AS THE PIN LENGTH");
-    }
-}
+
 
