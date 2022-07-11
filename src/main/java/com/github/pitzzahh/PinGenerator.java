@@ -45,7 +45,8 @@ public final class PinGenerator {
         String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String userDefined;
 
-        char[] pinHolder = new char[0];
+        var pinHolder = new char[0];
+
         if ((pinType == NUMBERS || pinType == LETTERS || pinType == MIXED_NUMBERS_AND_LETTERS || pinType == USER_DEFINED) && (pinLength >= 4 && pinLength <= 20)) {
             // storing each randomly generated characters / user defined pin or password into this char array
             pinHolder = new char[pinLength];
