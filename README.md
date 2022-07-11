@@ -5,7 +5,6 @@
 If you use Maven, add the following configuration to your project's `pom.xml`
 
 ```maven
-
 <dependencies>
 
     <!-- other dependencies are there -->
@@ -17,3 +16,4 @@ If you use Maven, add the following configuration to your project's `pom.xml`
     <!-- other dependencies are there -->
 
 </dependencies>
+```
