@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/pitzzahh/PinGenerator.java" afterDir="false" />
+    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="removed inner record and exceptions, moved to their own files.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +16,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Record" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
@@ -27,6 +24,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/github/pitzzahh/PinGenerator.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,8 +41,10 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "D:/myJavaProjects/pinGenerator"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -50,42 +52,18 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.pitzzahh" />
       <recent name="com.pitzzahh" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PinGeneratorTest">
-    <configuration name="PinGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.pitzzahh.PinGeneratorTest" />
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
       <module name="pinGenerator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pitzzahh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.pitzzahh.Test" />
-      <module name="pinGenerator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pitzzahh.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.PinGeneratorTest" />
-        <item itemvalue="Application.Test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,6 +74,56 @@
       <option name="presentableId" value="Default" />
       <updated>1651716727331</updated>
     </task>
+    <task id="LOCAL-00001" summary="quick upload">
+      <created>1651751630652</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651751630652</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactored PinGenerator class.">
+      <created>1657527043647</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657527043647</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added distribution management.">
+      <created>1657527066792</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657527066792</updated>
+    </task>
+    <task id="LOCAL-00004" summary="created each files.">
+      <created>1657529159951</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657529159951</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added info for maven dependency.">
+      <created>1657529243899</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657529243899</updated>
+    </task>
+    <task id="LOCAL-00006" summary="removed Test.">
+      <created>1657529255907</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657529255908</updated>
+    </task>
+    <task id="LOCAL-00007" summary="removed inner record and exceptions, moved to their own files.">
+      <created>1657529302315</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657529302315</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,5 +136,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="quick upload" />
+    <MESSAGE value="refactored PinGenerator class." />
+    <MESSAGE value="added distribution management." />
+    <MESSAGE value="created each files." />
+    <MESSAGE value="added info for maven dependency." />
+    <MESSAGE value="removed Test." />
+    <MESSAGE value="removed inner record and exceptions, moved to their own files." />
+    <option name="LAST_COMMIT_MESSAGE" value="removed inner record and exceptions, moved to their own files." />
   </component>
 </project>
