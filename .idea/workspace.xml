@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="ide files">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/pitzzahh/PinGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/pitzzahh/PinGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657530638186</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ide files">
+      <created>1657532971209</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1657532971209</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,6 +177,7 @@
     <MESSAGE value="removed inner record and exceptions, moved to their own files." />
     <MESSAGE value="ide files." />
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="ide files" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide files" />
   </component>
 </project>
