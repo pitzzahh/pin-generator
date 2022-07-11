@@ -63,7 +63,7 @@ public final class PinGenerator {
             }
         }
         if (pinLength <= 3 || pinLength >= 21) throw new InvalidPinLengthException(pinLength);
-        else if (pinType != 1 && pinType != 2 && pinType != 3) throw new InvalidPinTypeException(pinType);
+        else if (pinType != NUMBERS && pinType != LETTERS && pinType != MIXED_NUMBERS_AND_LETTERS && pinType != USER_DEFINED) throw new InvalidPinTypeException(pinType);
         else if (pinLength != pinHolder.length) throw new InvalidPinLengthException(pinLength);
         return new Pin(String.valueOf(pinHolder), pinType, pinLength);
     }
