@@ -1,7 +1,8 @@
-package com.pitzzahh;
+package com.github.pitzzahh;
 
 import java.util.Random;
 import java.util.Scanner;
+
 /**
  * Utility class used in making pins or passwords.
  * To generate a pin, you need to instantiate the Pin record, not the PinGenerator class itself.
@@ -16,7 +17,8 @@ public final class PinGenerator {
 
     public static final int NUMBERS = 1;
     public static final int LETTERS = 2;
-    public static final int USER_DEFINED = 3;
+    public static final int MIXED_NUMBERS_AND_LETTERS = 3;
+    public static final int USER_DEFINED = 4;
 
     // Cannot instantiate this class
     private PinGenerator() {}
@@ -33,32 +35,23 @@ public final class PinGenerator {
      *      <p>NUMBERS = 1</p>
      *      <p>LETTERS = 2</p>
      *      <p>USER_DEFINED = 3</p>
-     * @param pinLength the length of the pinInString. The pinInString length should not be less than 2 and not over than 20 characters.
+     * @param pinLength the length of the pinInString. The pinInString length should not be less than 4 and not over than 20 characters.
      */
-    public static Pin generatePin(int pinType, int pinLength) {
+    public static Pin generatePin(int pinType, int pinLength) throws InvalidPinLengthException, InvalidPinTypeException {
 
         String numbers = "1234567890";
         String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String userDefined;
 
         char[] pinHolder = new char[0];
-        if ((pinType == 1 || pinType == 2 || pinType == 3) && (pinLength >= 4 && pinLength <= 20)) {
+        if ((pinType == NUMBERS || pinType == LETTERS || pinType == MIXED_NUMBERS_AND_LETTERS || pinType == USER_DEFINED) && (pinLength >= 4 && pinLength <= 20)) {
             // storing each randomly generated characters / user defined pinInString or password into this char array
             pinHolder = new char[pinLength];
             // checks which type of pinInString is it
             switch (pinType) {
-                case NUMBERS -> {
-                    // generates random numbers by selecting random indexes at numbers variable.
-                    for (int index = 0; index < pinLength; index++) {
-                        pinHolder[index] = numbers.charAt(random.nextInt(numbers.length()));
-                    }
-                }
-                case LETTERS -> {
-                    // generates random letters by selecting random indexes at letters variable.
-                    for (int index = 0; index < pinLength; index++) {
-                        pinHolder[index] = letters.charAt(random.nextInt(letters.length()));
-                    }
-                }
+                case NUMBERS -> generatePin(pinLength, pinHolder, numbers);
+                case LETTERS -> generatePin(pinLength, pinHolder, letters);
+                case MIXED_NUMBERS_AND_LETTERS -> generatePin(pinLength, pinHolder, numbers + letters);
                 case USER_DEFINED -> {
                     System.out.print("\u001B[33mENTER YOUR OWN PIN: ");
                     userDefined = new Scanner(System.in).nextLine();
@@ -66,14 +59,22 @@ public final class PinGenerator {
                 }
             }
         }
-        try {
-            if (pinLength <= 3 || pinLength >= 21) throw new InvalidPinLengthException(pinLength);
-            else if (pinType != 1 && pinType != 2 && pinType != 3) throw new InvalidPinTypeException(pinType);
-            else if (pinLength != pinHolder.length) throw new InvalidPinLengthException(pinLength);
-        } catch (Exception exception) {
-            System.out.println("\u001B[31m" + exception.getMessage());
-        }
+        if (pinLength <= 3 || pinLength >= 21) throw new InvalidPinLengthException(pinLength);
+        else if (pinType != 1 && pinType != 2 && pinType != 3) throw new InvalidPinTypeException(pinType);
+        else if (pinLength != pinHolder.length) throw new InvalidPinLengthException(pinLength);
         return new Pin(String.valueOf(pinHolder), pinType, pinLength);
+    }
+
+    /**
+     * Generates the pin.
+     * @param pinLength the length of the pin.
+     * @param pinHolder the char array that holds the pin.
+     * @param s the letters or numbers.
+     */
+    private static void generatePin(int pinLength, char[] pinHolder, String s) {
+        for (int index = 0; index < pinLength; index++) {
+            pinHolder[index] = s.charAt(random.nextInt(s.length()));
+        }
     }
 
     /**
