@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="update dependency info.">
+    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="ide modified file.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +212,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657863050278</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added tags needed for releasing to central repo.">
+      <created>1657863600968</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657863600968</updated>
+    </task>
+    <task id="LOCAL-00020" summary="ide modified file.">
+      <created>1657863636306</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1657863636306</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +257,9 @@
     <MESSAGE value="fixed README" />
     <MESSAGE value="ide files" />
     <MESSAGE value="update dependency info." />
-    <option name="LAST_COMMIT_MESSAGE" value="update dependency info." />
+    <MESSAGE value="added tags needed for releasing to central repo." />
+    <MESSAGE value="ide modified file." />
+    <option name="LAST_COMMIT_MESSAGE" value="ide modified file." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
