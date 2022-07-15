@@ -9,9 +9,9 @@ If you use Maven, add the following configuration to your project's `pom.xml`
 
     <!-- other dependencies are there -->
     <dependency>
-        <groupId>com.github.pitzzahh</groupId>
+        <groupId>io.github.pitzzahh</groupId>
         <artifactId>pin-generator</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </dependency>
     <!-- other dependencies are there -->
 
