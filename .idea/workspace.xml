@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="fixed README">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/pinGenerator_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/pin-generator_jar.xml" afterDir="false" />
+    <list default="true" id="113d8946-6099-4c63-96fb-7f3f0756fc81" name="Changes" comment="update dependency info.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657553348660</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="ide files">
+      <created>1657553423147</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1657553423147</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update dependency info.">
+      <created>1657863050278</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1657863050278</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -226,10 +240,11 @@
     <MESSAGE value="refactored else if condition" />
     <MESSAGE value="ide file" />
     <MESSAGE value="added some error checking" />
-    <MESSAGE value="ide files" />
     <MESSAGE value="fixed bug" />
     <MESSAGE value="fixed README" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed README" />
+    <MESSAGE value="ide files" />
+    <MESSAGE value="update dependency info." />
+    <option name="LAST_COMMIT_MESSAGE" value="update dependency info." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
