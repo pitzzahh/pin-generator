@@ -1,9 +1,10 @@
 # pin-generator
 
 ```java
-import com.github.pitzzahh.Pin;
-import com.github.pitzzahh.PinGenerator;
+import com.github.pitzzahh.pinGenerator.Pin;
+import com.github.pitzzahh.pinGenerator.PinGenerator;
 import io.github.pitzzahh.util.utilities.Print.println;
+
 public class Main {
     public static void main(String[] args) {
         // generates a random 10 numbers as pin
