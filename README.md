@@ -1,6 +1,11 @@
 # pin-generator
 ### A simple project that generates a pin.
 
+![GitHub Issues](https://img.shields.io/github/issues/pitzzahh/pin-generator)
+![Forks](https://img.shields.io/github/forks/pitzzahh/pin-generator)
+![Stars](https://img.shields.io/github/stars/pitzzahh/pin-generator)
+![License](https://img.shields.io/github/license/pitzzahh/pin-generator)
+
 ---
 
 ## How to use
