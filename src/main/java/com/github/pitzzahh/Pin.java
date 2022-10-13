@@ -9,6 +9,6 @@ package com.github.pitzzahh;
 public record Pin(String pin, int pinType, int pinLength) {
     @Override
     public String toString() {
-        return (pin().length() == pinLength()) ? ("\033[0;94m" + pin()) : "";
+        return (pin().length() == pinLength() || (pinType == 4)) ? ("\033[0;94m" + pin()) : "";
     }
 }
