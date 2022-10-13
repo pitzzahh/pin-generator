@@ -8,6 +8,35 @@
     <artifactId>pin-generator</artifactId>
     <version>1.0.0</version>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.9.0</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.pitzzahh</groupId>
+            <artifactId>util-classes</artifactId>
+            <version>1.0.11</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.github.pitzzahh</groupId>
+                    <artifactId>util-classes</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+    </dependencies>
+
     <properties>
         <maven.test.skip>true</maven.test.skip>
         <maven.compiler.source>17</maven.compiler.source>
