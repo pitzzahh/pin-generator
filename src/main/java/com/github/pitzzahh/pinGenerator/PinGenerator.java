@@ -55,6 +55,7 @@ public final class PinGenerator {
      * @param pinLength the length of the pin. The pin length should not be less than 4 and not over than 20 characters.
      * @throws InvalidPinLengthException if the pin length is not valid.
      * @throws InvalidPinTypeException if the pin type is invalid.
+     * @return Pin the pin that is generated.
      */
     public static Pin generatePin(int pinType, int pinLength) throws InvalidPinLengthException, InvalidPinTypeException {
 
