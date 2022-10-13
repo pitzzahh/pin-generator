@@ -1,5 +1,9 @@
 # pin-generator
+### A simple project that generates a pin.
 
+---
+
+## How to use
 ```java
 import com.github.pitzzahh.pinGenerator.Pin;
 import com.github.pitzzahh.pinGenerator.PinGenerator;
@@ -20,7 +24,7 @@ public class Main {
 }
 ```
 
-### Add Maven Dependency
+## Add Maven Dependency
 
 ![maven-central](https://img.shields.io/maven-central/v/io.github.pitzzahh/pin-generator?color=blue)
 
