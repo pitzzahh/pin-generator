@@ -17,9 +17,24 @@ import java.util.Scanner;
  */
 public final class PinGenerator {
 
+    /**
+     * If Pin type is of numbers
+     */
     public static final int NUMBERS = 1;
+
+    /**
+     * If Pin type is of letters
+     */
     public static final int LETTERS = 2;
+
+    /**
+     * If Pin type is of mixed numbers and letters.
+     */
     public static final int MIXED_NUMBERS_AND_LETTERS = 3;
+
+    /**
+     * If Pin type is user defined.
+     */
     public static final int USER_DEFINED = 4;
 
     // Cannot instantiate this class
@@ -38,6 +53,8 @@ public final class PinGenerator {
      *      <p>LETTERS = 2</p>
      *      <p>USER_DEFINED = 3</p>
      * @param pinLength the length of the pin. The pin length should not be less than 4 and not over than 20 characters.
+     * @throws InvalidPinLengthException if the pin length is not valid.
+     * @throws InvalidPinTypeException if the pin type is invalid.
      */
     public static Pin generatePin(int pinType, int pinLength) throws InvalidPinLengthException, InvalidPinTypeException {
 
