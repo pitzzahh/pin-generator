@@ -1,4 +1,4 @@
-package com.github.pitzzahh.exceptions;
+package com.github.pitzzahh.pinGenerator.exceptions;
 
 /**
  * Throwable class used for handling exceptions on invalid pin type.

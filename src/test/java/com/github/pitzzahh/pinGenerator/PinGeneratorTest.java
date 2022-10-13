@@ -1,8 +1,8 @@
-package com.github.pitzzahh;
+package com.github.pitzzahh.pinGenerator;
 
-import com.github.pitzzahh.exceptions.InvalidPinLengthException;
+import com.github.pitzzahh.pinGenerator.exceptions.InvalidPinLengthException;
 import static io.github.pitzzahh.util.utilities.Print.println;
-import com.github.pitzzahh.exceptions.InvalidPinTypeException;
+import com.github.pitzzahh.pinGenerator.exceptions.InvalidPinTypeException;
 import io.github.pitzzahh.util.utilities.validation.Validator;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;

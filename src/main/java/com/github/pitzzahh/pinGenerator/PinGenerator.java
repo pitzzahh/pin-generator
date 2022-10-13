@@ -1,7 +1,7 @@
-package com.github.pitzzahh;
+package com.github.pitzzahh.pinGenerator;
 
-import com.github.pitzzahh.exceptions.InvalidPinLengthException;
-import com.github.pitzzahh.exceptions.InvalidPinTypeException;
+import com.github.pitzzahh.pinGenerator.exceptions.InvalidPinLengthException;
+import com.github.pitzzahh.pinGenerator.exceptions.InvalidPinTypeException;
 import java.util.Random;
 import java.util.Scanner;
 

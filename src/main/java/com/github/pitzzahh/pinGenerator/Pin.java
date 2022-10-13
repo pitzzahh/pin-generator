@@ -1,4 +1,4 @@
-package com.github.pitzzahh;
+package com.github.pitzzahh.pinGenerator;
 
 /**
  * Record used for making a Pin object.
