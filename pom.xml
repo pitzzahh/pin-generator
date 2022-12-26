@@ -26,7 +26,7 @@
         <dependency>
             <groupId>io.github.pitzzahh</groupId>
             <artifactId>util-classes</artifactId>
-            <version>1.0.11</version>
+            <version>1.0.15</version>
             <exclusions>
                 <exclusion>
                     <groupId>io.github.pitzzahh</groupId>
