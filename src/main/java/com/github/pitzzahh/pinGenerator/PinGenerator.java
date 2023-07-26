@@ -63,21 +63,22 @@ public final class PinGenerator {
         String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String userDefined;
 
-        var pinHolder = new char[0];
+        char[] pinHolder = new char[0];
 
         if ((pinType == NUMBERS || pinType == LETTERS || pinType == MIXED_NUMBERS_AND_LETTERS || pinType == USER_DEFINED) && (pinLength >= 4 && pinLength <= 20)) {
             // storing each randomly generated characters / user defined pin or password into this char array
             pinHolder = new char[pinLength];
             // checks which type of pin is it
-            switch (pinType) {
-                case NUMBERS -> generatePin(pinLength, pinHolder, numbers);
-                case LETTERS -> generatePin(pinLength, pinHolder, letters);
-                case MIXED_NUMBERS_AND_LETTERS -> generatePin(pinLength, pinHolder, numbers + letters);
-                case USER_DEFINED -> {
-                    System.out.print("\u001B[33mENTER YOUR OWN PIN: ");
-                    userDefined = new Scanner(System.in).nextLine();
-                    pinHolder = userDefined.toCharArray();
-                }
+            if (pinType == NUMBERS) {
+                generatePin(pinLength, pinHolder, numbers);
+            } else if (pinType == LETTERS) {
+                generatePin(pinLength, pinHolder, letters);
+            } else if (pinType == MIXED_NUMBERS_AND_LETTERS) {
+                generatePin(pinLength, pinHolder, numbers + letters);
+            } else if (pinType == USER_DEFINED) {
+                System.out.print("\u001B[33mENTER YOUR OWN PIN: ");
+                userDefined = new Scanner(System.in).nextLine();
+                pinHolder = userDefined.toCharArray();
             }
         }
         if (pinLength <= 3 || pinLength >= 21 && (pinType != USER_DEFINED)) throw new InvalidPinLengthException(pinLength);

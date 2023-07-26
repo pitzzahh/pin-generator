@@ -6,6 +6,8 @@ import com.github.pitzzahh.pinGenerator.exceptions.InvalidPinTypeException;
 import io.github.pitzzahh.util.utilities.validation.Validator;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 class PinGeneratorTest {
@@ -13,11 +15,11 @@ class PinGeneratorTest {
     @Test
     void shouldPassIfPinIsRandomNumbers() throws InvalidPinLengthException, InvalidPinTypeException {
         // given
-        var pintype = PinGenerator.NUMBERS;
-        var pintLength = 6;
+        int pintype = PinGenerator.NUMBERS;
+        int pintLength = 6;
         // when
-        var pinObject = PinGenerator.generatePin(pintype, pintLength);
-        var pin = pinObject.pin();
+        Pin pinObject = PinGenerator.generatePin(pintype, pintLength);
+        String pin = pinObject.pin();
         println(pinObject);
         // then
         assertTrue(Validator.isWholeNumber().test(pin));
@@ -26,11 +28,11 @@ class PinGeneratorTest {
     @Test
     void shouldPassIfPinIsRandomLetters() throws InvalidPinLengthException, InvalidPinTypeException {
         // given
-        var pintype = PinGenerator.LETTERS;
-        var pintLength = 6;
+        int pintype = PinGenerator.LETTERS;
+        int pintLength = 6;
         // when
-        var pinObject = PinGenerator.generatePin(pintype, pintLength);
-        var pin = pinObject.pin();
+        Pin pinObject = PinGenerator.generatePin(pintype, pintLength);
+        String pin = pinObject.pin();
         println(pinObject);
         // then
         assertTrue(Validator.isString().test(pin));
@@ -39,12 +41,12 @@ class PinGeneratorTest {
     @Test
     void shouldPassIfPinIsRandomMixedNumbersAndLetters() throws InvalidPinLengthException, InvalidPinTypeException {
         // given
-        var pintype = PinGenerator.LETTERS;
-        var pintLength = 6;
+        int pintype = PinGenerator.LETTERS;
+        int pintLength = 6;
         // when
-        var pinObject = PinGenerator.generatePin(pintype, pintLength);
-        var pin = pinObject.pin().split("");
-        var result = IntStream.range(0, pintLength)
+        Pin pinObject = PinGenerator.generatePin(pintype, pintLength);
+        String[] pin = pinObject.pin().split("");
+        Optional<String> result = IntStream.range(0, pintLength)
                 .filter(i -> Validator.isString().or(Validator.isWholeNumber()).test(pin[i]))
                 .findAny()
                 .stream()
@@ -57,7 +59,7 @@ class PinGeneratorTest {
     @Test
     void shouldThrowInvalidPinLengthExceptionIfPinLengthIsLessThanFour() {
         assertThrows(InvalidPinLengthException.class, () -> {
-            var pin = PinGenerator.generatePin(PinGenerator.NUMBERS, 3);
+            Pin pin = PinGenerator.generatePin(PinGenerator.NUMBERS, 3);
             println(pin);
         });
     }
